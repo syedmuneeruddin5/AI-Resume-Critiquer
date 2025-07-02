@@ -1,0 +1,6 @@
+streamlit
+docling
+weasyprint
+markdown-it-py[plugins]
+sseclient-py
+python-dotenv
