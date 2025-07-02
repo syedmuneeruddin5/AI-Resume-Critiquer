@@ -108,7 +108,7 @@ streamlit run main.py
 
 This project is available under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## 📝 Acknowledgments
 
 Inspired by this [video](https://youtu.be/XZdY15sHUa8?si=FY-jgwX0S_8kLdDR) from Tech with Tim, this implementation extends the original concept with enhancements including:
 - Multi-provider AI support
