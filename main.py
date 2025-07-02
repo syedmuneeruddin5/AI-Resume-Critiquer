@@ -431,6 +431,7 @@ def main():
         setup_model()
 
     st.title("AI Resume Critiquer")
+    st.markdown("🔗 GitHub Link: [AI-Resume-Critiquer](https://github.com/syedmuneeruddin5/AI-Resume-Critiquer.git)")
     st.markdown("Upload your resume and get AI-powered feedback tailored to your needs")
 
     with st.form("resume_details"):
