@@ -73,8 +73,12 @@ def setup_model(default_open_router_model="DeepSeek: R1 0528 (free)", default_ol
 
         open_router_key = st.text_input("Open Router Key", value=(os.getenv("OPEN_ROUTER_API_KEY")), type="password", key="raw_open_router_key")
 
-        if check_api_connection_open_router(st.session_state.raw_open_router_key) is not True:
-                st.error(f"API Connection Failed : {check_api_connection_open_router(st.session_state.raw_open_router_key)["message"]}")
+        if not st.session_state.first_run:
+            if check_api_connection_open_router(st.session_state.raw_open_router_key) is not True:
+                    st.error(f"API Connection Failed : {check_api_connection_open_router(st.session_state.raw_open_router_key)["message"]}")
+
+        else:
+            st.session_state.first_run = False
 
         if os.getenv("OPEN_ROUTER_API_KEY"):
             st.caption("If no key provided, it will use .env key")
@@ -426,6 +430,9 @@ def main():
     load_dotenv()
 
     st.set_page_config(page_title="AI Resume Critiquer", page_icon="📄", layout="centered")
+
+    if "first_run" not in st.session_state:
+        st.session_state.first_run = True
 
     with st.sidebar:
         setup_model()
