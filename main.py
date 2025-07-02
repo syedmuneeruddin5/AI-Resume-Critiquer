@@ -246,8 +246,12 @@ def generate_analysis(resume_content, model_details, job_industry=None, job_role
     if model_details["llm_provider"] == "Ollama":
         analysis = generate_ollama_response(st.session_state.messages, model_details)
 
-    st.session_state.messages.append({"role": "assistant", "content": analysis})
-    return {"response": analysis, "messages" : st.session_state.messages}
+    if analysis:
+        st.session_state.messages.append({"role": "assistant", "content": analysis})
+        return {"response": analysis, "messages" : st.session_state.messages}
+    
+    else:
+        return False
 
 def generate_open_router_response(messages,model_details, stream=False):
 
@@ -276,6 +280,8 @@ def generate_open_router_response(messages,model_details, stream=False):
         if error['code'] == 500:
             st.error("The Server is Down. Please try again")
         st.error(f"Error Code: {error['code']} \nError Message: {error['message']}")
+
+        return False
 
     else:
         if stream is False:
