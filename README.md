@@ -2,18 +2,14 @@
 
 An AI-powered resume analysis tool that provides personalized feedback and actionable insights to help job seekers optimize their resumes for specific roles and industries.
 
+**Try it here** 👉 [AI Resume Critiquer](https://ai-resume-critiquer-muneer.streamlit.app/)
+
 ## 🌟 Features
 
 - **AI-Powered Analysis**: Resume evaluation using OpenRouter or Ollama models
 - **Interactive Chat**: Follow-up conversations with AI career coach
 - **PDF Export**: Download professionally formatted analysis reports
 - **Document Processing**: Supports PDF and text file parsing
-
-## 🌐 Live Demo
-
-**Try it here** 👉 [AI Resume Critiquer](https://ai-resume-critiquer-muneer.streamlit.app/)
-
-Upload your resume and get AI-powered feedback!
 
 ## 🚀 Getting Started
 
