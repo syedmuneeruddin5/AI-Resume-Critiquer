@@ -9,6 +9,12 @@ An AI-powered resume analysis tool that provides personalized feedback and actio
 - **PDF Export**: Download professionally formatted analysis reports
 - **Document Processing**: Supports PDF and text file parsing
 
+## 🌐 Live Demo
+
+**Try it here** 👉 [AI Resume Critiquer](https://ai-resume-critiquer-muneer.streamlit.app/)
+
+Upload your resume and get AI-powered feedback!
+
 ## 🚀 Getting Started
 
 ### Prerequisites
