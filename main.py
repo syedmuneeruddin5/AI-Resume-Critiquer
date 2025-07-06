@@ -155,6 +155,7 @@ def check_ollama_connection(base_url):
 
     except requests.exceptions.ConnectionError:
         st.error("Please start the Ollama server using : ollama serve")
+        st.caption("If the website is running online, it may not work. Clone the code and run locally to use Ollama")
         return False
 
     return True
