@@ -273,8 +273,7 @@ def generate_open_router_response(messages,model_details, stream=False):
         stream=stream
     )
 
-
-    if "error" in response.json():
+    if response.status_code != 200 and "error" in response.json():
         error = response.json()["error"]
 
         if error['code'] == 500:
