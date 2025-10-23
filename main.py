@@ -66,7 +66,7 @@ def get_job_description():
 
     return {"job_industry":job_industry,"job_role":job_role}
 
-def setup_model(default_open_router_model="DeepSeek: R1 0528 (free)", default_ollama_model="gemma3:4b"):
+def setup_model(default_open_router_model="DeepSeek: DeepSeek V3.1 (free)", default_ollama_model="gemma3:4b"):
     llm_provider = st.selectbox("Choose a LLM Provider", ("Open Router", "Ollama"), index=0)
 
     if llm_provider == "Open Router":
